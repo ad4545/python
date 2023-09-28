@@ -3,7 +3,7 @@ import json
 
 streams_config = {
     # Replace with your Kafka broker address
-    'bootstrap.servers': 'localhost:9092',
+    'bootstrap.servers': 'b-1.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9092,b-2.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9092',
     'group.id': 'group-0',
     'auto.offset.reset': 'earliest'  # Start consuming from the beginning of the topic
 }

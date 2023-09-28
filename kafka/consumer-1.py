@@ -2,7 +2,7 @@ from confluent_kafka import Consumer,KafkaError
 
 
 consumer_config_1 = {
-    'bootstrap.servers': 'b-1.kafkacluster.vwpk16.c3.kafka.ap-south-1.amazonaws.com:9092,b-2.kafkacluster.vwpk16.c3.kafka.ap-south-1.amazonaws.com:9092',  # Replace with your Kafka broker address
+    'bootstrap.servers': 'b-1.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9092,b-2.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9092',  # Replace with your Kafka broker address
     'group.id': 'group-2',
     'auto.offset.reset': 'earliest'  # Start consuming from the beginning of the topic
 }

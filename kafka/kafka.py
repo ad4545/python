@@ -37,7 +37,7 @@ def send_message(msg: dict):
     # REQUEST_NUMBER.inc()
 
     # Produce a message
-    topic = 'stream-topic'
+    topic = 'test-topic'
     # dictionary = msg.model_dump(mode='string')
     result = json.dumps(msg)
     producer.produce(topic, key='key', value=result)

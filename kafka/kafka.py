@@ -22,7 +22,11 @@ producer_config = {
     'acks':'all',
     'compression.type':'snappy',
     'batch.num.messages':1000,
-    'linger.ms':10
+    'linger.ms':10,
+    'security.protocol': 'SASL_SSL',
+    'sasl.mechanisms': 'SCRAM-SHA-512',  # Use SCRAM-SHA-256 or the mechanism you chose.
+    'sasl.username': 'KAFKA_CONNECT',  # Replace with the Kafka username
+    'sasl.password': 'client01',  # Replace with the Kafka password
 }
 producer = Producer(producer_config)
 

@@ -17,7 +17,7 @@ class Sample(BaseModel):
 # Define a Kafka producer
 
 producer_config = {
-    'bootstrap.servers': 'b-1.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9092,b-2.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9092',
+    'bootstrap.servers': 'b-2-public.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9196,b-1-public.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9196',
     'client.id': 'python-producer',
     'acks':'all',
     'compression.type':'snappy',

@@ -3,7 +3,7 @@ from confluent_kafka import Consumer,KafkaError
 
 consumer_config_1 = {
     'bootstrap.servers': 'b-2-public.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9196,b-1-public.kafkamskcluster.e0b8oe.c2.kafka.ap-south-1.amazonaws.com:9196',  # Replace with your Kafka broker address
-    'group.id': '',
+    'group.id': 'group-1',
     'auto.offset.reset': 'earliest',
     'security.protocol': 'SASL_SSL',
     'sasl.mechanisms': 'SCRAM-SHA-512',  # Use SCRAM-SHA-256 or the mechanism you chose.
@@ -21,7 +21,7 @@ consumer_1.subscribe(['test-topic'])
 
 
 while True:
-    msg = consumer_1.poll(5.0)  # Poll for new messages with a timeout of 1 second
+    msg = consumer_1.poll(1)  # Poll for new messages with a timeout of 1 second
     if msg is None:
         continue
     if msg.error():
